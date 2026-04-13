@@ -29,6 +29,51 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+Real music platforms like Spotify use two main approaches to recommend songs. Collaborative filtering looks at what similar users listened to, like if someone with your exact taste loved a song, you probably will too. Content-based filtering looks at the actual attributes of songs you already like (genre, energy, tempo) and finds other songs with similar attributes. My system uses a simplified content-based approach since we don't have other users, it will be just one user profile matched against song features.
+
+Song features used: genre, mood, energy, tempo_bpm, valence, danceability, acousticness
+UserProfile stores: favorite genre, favorite mood, target energy level, and whether the user prefers acoustic songs
+Scoring logic (Algorithm Recipe):
+
++2.0 points for a genre match (strongest signal)
++1.0 points for a mood match
+Up to +1.0 points for energy similarity (closer to the user's target = higher score)
++0.5 bonus if the user likes acoustic music and the song's acousticness is above 0.7
+
+The system scores every song individually (the "Scoring Rule"), then sorts all scores from highest to lowest and returns the top K results (the "Ranking Rule"). Each recommendation includes the reasons it scored well, so the user can understand why a song was suggested.
+
+Dataset:
+The song catalog contains 18 songs across 10+ genres including pop, lofi, rock, ambient, jazz, synthwave, indie pop, r&b, edm, folk, hip-hop, classical, world, and indie rock. Moods range from happy and chill to intense, melancholy, aggressive, and romantic. All numerical features (energy, valence, danceability, acousticness) are on a 0.0–1.0 scale, and tempo is in BPM.
+User Profile Structure:
+Each user profile is a dictionary with four keys:
+
+genre — the user's favorite genre (string)
+mood — the user's preferred mood (string)
+energy — target energy level from 0.0 to 1.0 (float)
+likes_acoustic — whether the user prefers acoustic sounds (boolean)
+
+Potential Biases:
+This system will likely over-prioritize genre since it carries the heaviest weight (+2.0). A great song that matches a user's mood and energy perfectly but is in the "wrong" genre would score lower than a mediocre genre match. The dataset is also small enough that some genres only have one song, meaning those users get very limited recommendations.
+
+- System Mechanisms created with Claude
+
+## Terminal Output
+
+### Profile 1: Happy Pop Fan
+![alt text](image.png)
+
+### Profile 2: Chill Lofi Listener
+![alt text](image-1.png)
+
+### Profile 3: Intense Rock Lover
+![alt text](image-2.png)
+
+### Profile 4: Edge Case 1
+![alt text](image-3.png)
+
+### Profile 5: Edge Case 2
+![alt text](image-4.png)
+
 ---
 
 ## Getting Started
