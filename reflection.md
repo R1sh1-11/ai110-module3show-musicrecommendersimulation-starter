@@ -4,11 +4,11 @@
 
 ### Happy Pop Fan vs. Chill Lofi Listener
 
-These two profiles produced completely different top 5 lists with zero overlap. The Pop Fan got upbeat, high-energy tracks (Sunrise City, Gym Hero) while the Lofi Listener got mellow, acoustic tracks (Midnight Coding, Library Rain). This makes sense because the profiles differ on every single preference — genre, mood, energy, and acoustic preference. It shows the system can clearly distinguish between very different types of listeners.
+These two profiles produced completely different top 5 lists with zero overlap. The Pop Fan got upbeat, high-energy tracks (Sunrise City, Gym Hero) while the Lofi Listener got mellow, acoustic tracks (Midnight Coding, Library Rain). This makes sense because the profiles differ on every single preference: genre, mood, energy, and acoustic preference. It shows the system can clearly distinguish between very different types of listeners.
 
 ### Happy Pop Fan vs. Intense Rock Lover
 
-Interestingly, Gym Hero appeared in both lists — #2 for the Pop Fan and #2 for the Rock Lover. For the Pop Fan it matched on genre (pop), and for the Rock Lover it matched on mood (intense). This shows how a high-energy song can appeal to different users for completely different reasons. Sunrise City appeared in the Pop Fan's list at #1 but only at #5 for the Rock Lover, where it had no genre or mood match: just decent energy.
+Interestingly, Gym Hero appeared in both lists: #2 for the Pop Fan and #2 for the Rock Lover. For the Pop Fan it matched on genre (pop), and for the Rock Lover it matched on mood (intense). This shows how a high-energy song can appeal to different users for completely different reasons. Sunrise City appeared in the Pop Fan's list at #1 but only at #5 for the Rock Lover, where it had no genre or mood match: just decent energy.
 
 ### Intense Rock Lover vs. Sad But Energetic (Edge Case)
 
